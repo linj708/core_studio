@@ -1,0 +1,18 @@
+body {
+	background-color: #707070;
+	margin-top: 30%;
+	margin-left: 10%;
+}
+
+.section {
+	font-family: 'PT sans', sans-serif;
+	width: 40%;
+	color: #C8C4BD;
+	font-size: 17pt;
+}
+
+h1 {
+	font-family: 'Roboto Slab', serif;
+	color: #EFEFEF;
+	font-size: 50pt;
+}
