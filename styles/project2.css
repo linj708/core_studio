@@ -3,3 +3,7 @@ img {
 	height: auto;
 
 }
+
+.links {
+	display: inline-grid;
+}
