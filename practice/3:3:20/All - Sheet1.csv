@@ -1,30 +1,30 @@
-word,starting letter,# of letters,part of speech,dictionary link,html_text
-acrid,a,5,adjective,https://www.dictionary.com/browse/acrid?s=t,
-annually,a,8,adverb,https://www.dictionary.com/browse/annually?s=t,
-backtracking,b,12,verb,https://www.dictionary.com/browse/backtracking,
-bacon,b,5,noun,https://www.dictionary.com/browse/bacon?s=t,
-boundary,b,8,noun,https://www.dictionary.com/browse/boundary?s=t,
-commandeered,c,12,verb,https://www.dictionary.com/browse/commandeer?s=t,
-culture,c,7,"noun, verb",https://www.dictionary.com/browse/culture?s=t,
-debaucheries,d,12,noun,https://www.dictionary.com/browse/debauchery?s=t,
-drizzle,d,7,"verb, noun",https://www.dictionary.com/browse/drizzle?s=t,
-elide,e,5,verb,https://www.dictionary.com/browse/elide?s=t,
-facet,f,5,"noun, verb",https://www.dictionary.com/browse/facet?s=t,
-hence,h,5,adverb,https://www.dictionary.com/browse/hence?s=t,
-image,i,5,noun,https://www.dictionary.com/browse/image?s=t,
-inapplicable,i,12,adjective,https://www.dictionary.com/browse/inapplicable#,
-lance,l,5,"noun, verb",https://www.dictionary.com/browse/lance?s=t,
-magma,m,5,noun,https://www.dictionary.com/browse/magma?s=t,
-mittens,m,7,noun,https://www.dictionary.com/browse/mitten?s=t,
-naked,n,5,adjective,https://www.dictionary.com/browse/naked?s=t,
-non-breakable,n,12,adjective,https://www.dictionary.com/browse/break?s=t,
-outset,o,6,noun,https://www.dictionary.com/browse/outset?s=t,
-payphone,p,8,noun,https://www.dictionary.com/browse/payphone?s=t,
-primary,p,7,"adjective, noun",https://www.dictionary.com/browse/primary?s=t,
-printer,p,7,noun,https://www.dictionary.com/browse/printer?s=ts,
-styles,s,6,"noun, verb",https://www.dictionary.com/browse/styling?s=t,
-swimmer,s,7,noun,https://www.dictionary.com/browse/swimmer?s=t,
-tattooed,t,8,verb,https://www.dictionary.com/browse/tattooed,
-toilets,t,7,noun,https://www.dictionary.com/browse/toilet?s=t,
-undress,u,7,verb,https://www.dictionary.com/browse/undress?s=t,
-whistles,w,8,verb,https://www.dictionary.com/browse/whistle--in--the--dark?s=t,
+word,starting letter,# of letters,part of speech,dictionary link
+acrid,a,5,adjective,https://www.dictionary.com/browse/acrid?s=t
+annually,a,8,adverb,https://www.dictionary.com/browse/annually?s=t
+backtracking,b,12,verb,https://www.dictionary.com/browse/backtracking
+bacon,b,5,noun,https://www.dictionary.com/browse/bacon?s=t
+boundary,b,8,noun,https://www.dictionary.com/browse/boundary?s=t
+commandeered,c,12,verb,https://www.dictionary.com/browse/commandeer?s=t
+culture,c,7,"noun, verb",https://www.dictionary.com/browse/culture?s=t
+debaucheries,d,12,noun,https://www.dictionary.com/browse/debauchery?s=t
+drizzle,d,7,"verb, noun",https://www.dictionary.com/browse/drizzle?s=t
+elide,e,5,verb,https://www.dictionary.com/browse/elide?s=t
+facet,f,5,"noun, verb",https://www.dictionary.com/browse/facet?s=t
+hence,h,5,adverb,https://www.dictionary.com/browse/hence?s=t
+image,i,5,noun,https://www.dictionary.com/browse/image?s=t
+inapplicable,i,12,adjective,https://www.dictionary.com/browse/inapplicable#
+lance,l,5,"noun, verb",https://www.dictionary.com/browse/lance?s=t
+magma,m,5,noun,https://www.dictionary.com/browse/magma?s=t
+mittens,m,7,noun,https://www.dictionary.com/browse/mitten?s=t
+naked,n,5,adjective,https://www.dictionary.com/browse/naked?s=t
+non-breakable,n,12,adjective,https://www.dictionary.com/browse/break?s=t
+outset,o,6,noun,https://www.dictionary.com/browse/outset?s=t
+payphone,p,8,noun,https://www.dictionary.com/browse/payphone?s=t
+primary,p,7,"adjective, noun",https://www.dictionary.com/browse/primary?s=t
+printer,p,7,noun,https://www.dictionary.com/browse/printer?s=ts
+styles,s,6,"noun, verb",https://www.dictionary.com/browse/styling?s=t
+swimmer,s,7,noun,https://www.dictionary.com/browse/swimmer?s=t
+tattooed,t,8,verb,https://www.dictionary.com/browse/tattooed
+toilets,t,7,noun,https://www.dictionary.com/browse/toilet?s=t
+undress,u,7,verb,https://www.dictionary.com/browse/undress?s=t
+whistles,w,8,verb,https://www.dictionary.com/browse/whistle--in--the--dark?s=t
