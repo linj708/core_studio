@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://d3js.org/d3.v5.min.js"></script>
+</head>
+<style type="text/css">
+	body, html {
+		font-family: "Times New Roman", serif;
+		}
+
+	.card {
+		background-color: lightgreen;
+		width:40%;
+		height:15em;
+		display:flex;
+		justify-content: center;
+		align-items: center;
+		margin: 2%;
+		display: inline-flex;
+		vertical-align: top;
+	}
+	.noun {
+		background-color: lightblue;
+	}
+
+	.adjective {
+		background-color: lavender;
+	}
+
+	.verb {
+		background-color: gold;
+	}
+	.circle {
+		background-color: navy;
+		width: 10em;
+		height: 10em;
+		border-radius: 50%;
+		position: absolute;
+		top:2%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 2%;
+		display: inline-flex;
+		vertical-align: top;
+		}
+
+
+
+
+</style>
+<body>
+	<div id="main">
+		<div class="circle"></div>
+		<div class="circle"></div>
+		<div class="circle"></div>
+		<div class="circle"></div>
+		<div class="circle"></div>
+		<div class="circle"></div>
+	</div>
+</body>
+<script type="text/javascript">
+	
+d3.csv('https://raw.githubusercontent.com/linj708/core_studio/master/practice/3%3A3%3A20/All%20-%20Sheet1.csv')
+	.then(
+		function(data){
+			console.log(data)
+			viewData(data,'main')
+		}
+		)
+	.catch(function(error){
+		// catch error
+	})
+// declare a function
+function viewData (data, location_id) {
+	// select the element that I will write the data in
+	el = document.querySelector('#'+location_id)
+	// write everything as text to this location
+
+	// select just one item and it's name
+	// el.innerHTML = data[0]['word']
+
+	// iterate over each item and do something with its attributes
+
+	data.forEach(function(item){
+			div = document.createElement('div')
+			div.setAttribute('class','card')
+			div.classList.add(item['part of speech'])
+			h1 = document.createElement('h1')
+			h1.innerHTML=item['word']
+			div.appendChild(h1)
+			el.appendChild(div)
+
+	})
+}
+
+
+</script>
+</html>
