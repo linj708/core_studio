@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://d3js.org/d3.v5.min.js"></script>
+</head>
+<style type="text/css">
+	body, html {
+		font-family: "Britannic Bold", sans-serif;
+		background-color: #309975
+
+		}
+
+	.card {
+		background-color: none;
+		color: #454D66;
+		width:;
+		height:3em;
+		display:inline;
+		align-content: right;
+		margin: 2%;
+	}
+
+	#title {
+		color: #EFEEB4;
+		
+	}
+
+
+
+
+</style>
+<body>
+	<div align= "right" id="title">
+	<h1>$ Dollar Holler $</h1>
+	</div>
+	<div id="main">
+		<a href="annually.html">annually</a>
+	</div>
+</body>
+<script type="text/javascript">
+	
+d3.csv('https://raw.githubusercontent.com/linj708/core_studio/master/practice/3%3A3%3A20/All%20-%20Sheet1.csv')
+	.then(
+		function(data){
+			console.log(data)
+			viewData(data,'main')
+		}
+		)
+	.catch(function(error){
+		// catch error
+	})
+// declare a function
+function viewData (data, location_id) {
+	// select the element that I will write the data in
+	el = document.querySelector('#'+location_id)
+	// write everything as text to this location
+
+	// select just one item and it's name
+	// el.innerHTML = data[0]['word']
+
+	// iterate over each item and do something with its attributes
+
+	data.forEach(function(item){
+			div = document.createElement('div')
+			div.setAttribute('class','card')
+			div.classList.add(item['part of speech'])
+			h2 = document.createElement('h2')
+			h2.innerHTML=item['word']
+			div.appendChild(h2)
+			el.appendChild(div)
+
+	})
+}
+
+
+</script>
+</html>
