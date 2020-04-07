@@ -11,19 +11,67 @@
 
 		}
 
-	.card {
-		background-color: none;
-		color: #454D66;
-		width:;
-		height:3em;
-		display:inline;
-		align-content: right;
-		margin: 2%;
+	#grid-container {
+		display: grid;
+		grid-template-columns: 40% 60%;
+		grid-auto-rows: min-content;
 	}
 
 	#title {
 		color: #EFEEB4;
+		font-size: 1.5em;
+		margin-bottom: 10px;
+		margin-top: 0;
+	}
+
+	a {
+		text-decoration: none;
+		color: #454D66;
+		padding-left: 1.4em;
+		line-height: 1.4;
+	}
+
+	.main {
+		margin-top: 0.4em;
+		grid-column: 2;
+		grid-row:1;
+		font-size: 5em;
+		padding: none;
+	}
+
+	#left {
+		margin: 1em;
+		grid-column: 1;
+		grid-row: 1;
+		text-align: center;
+	}
+
+	#selectors {
+		display: inline-flex;
+		padding-top: 2em;
+	}
+
+	.circle {
+		border-radius: 50%;
+		border: solid 5pt #EFEEB4;
+		background-color: #DAD873;
+		width: 9em;
+		height: 9em;
+		margin: 0.7em;
+	}
+
+	.circle form {
+		color: #454D66;
+		font-size: 1.5em;
+		margin-top: 1.5em;
 		
+
+	}
+
+	#screen {
+		height: 11%;
+		background-color: #309975;
+		border: solid 5pt #EFEEB4;
 	}
 
 
@@ -31,48 +79,78 @@
 
 </style>
 <body>
-	<div align= "right" id="title">
-	<h1>$ Dollar Holler $</h1>
+	<div id="grid-container">
+	<div id="left">
+		<div id="screen"></div>
+		<div id="selectors">
+		<div class="circle">
+			<form>
+  			starting<br>letter:<br>
+  			<select id="mySelect">
+    		<option value="annually">a</option>
+    		<option value="orange">b</option>
+    		<option value="pineapple">c</option>
+    		<option value="banana">d</option>
+  			</select>
+			</form>
+		</div>
+		<div class="circle">
+			<form>
+  			# of<br>letters:<br>
+  			<select id="mySelect">
+    		<option value="annually">5</option>
+    		<option value="orange">6</option>
+    		<option value="pineapple">7</option>
+    		<option value="banana">8</option>
+  			</select>
+			</form>
+		</div>
+		<div class="circle">
+			<form>
+  			part of<br>speech:<br>
+  			<select id="mySelect">
+    		<option value="annually">5</option>
+    		<option value="orange">6</option>
+    		<option value="pineapple">7</option>
+    		<option value="banana">8</option>
+  			</select>
+			</form>
+		</div>
+		</div>
+
 	</div>
-	<div id="main">
-		<a href="annually.html">annually</a>
+	<div class="main">
+		<h1 id="title">$ Dollar Holler</h1>
+		<a href="dollar-word-htmls/annually.html">annually</a><br>
+		<a href="dollar-word-htmls/attitude.html">attitude</a><br>
+		<a href="dollar-word-htmls/backtracking.html">backtracking</a><br>
+		<a href="dollar-word-htmls/bacon.html">bacon</a><br>
+		<a href="dollar-word-htmls/boundary.html">boundary</a><br>
+		<a href="dollar-word-htmls/commandeered.html">commandeered</a><br>
+		<a href="dollar-word-htmls/culture">culture</a><br>
+		<a href="dollar-word-htmls/debaucheries.html">debaucheries</a><br>
+		<a href="dollar-word-htmls/drizzle.html">drizzle</a><br>
+		<a href="dollar-word-htmls/elide.html">elide</a><br>
+		<a href="dollar-word-htmls/facet.html">facet</a><br>
+		<a href="dollar-word-htmls/hence.html">hence</a><br>
+		<a href="dollar-word-htmls/image.html">image</a><br>
+		<a href="dollar-word-htmls/inapplicable.html">inapplicable</a><br>
+		<a href="dollar-word-htmls/lance.html">lance</a><br>
+		<a href="dollar-word-htmls/magma.html">magma</a><br>
+		<a href="dollar-word-htmls/mittens.html">mittens</a><br>
+		<a href="dollar-word-htmls/naked.html">naked</a><br>
+		<a href="dollar-word-htmls/non-breakable.html">non-breakable</a><br>
+		<a href="dollar-word-htmls/outset.html">outset</a><br>
+		<a href="dollar-word-htmls/payphone.html">payphone</a><br>
+		<a href="dollar-word-htmls/primary.html">primary</a><br>
+		<a href="dollar-word-htmls/printer.html">printer</a><br>
+		<a href="dollar-word-htmls/styles.html">styles</a><br>
+		<a href="dollar-word-htmls/swimmer.html">swimmer</a><br>
+		<a href="dollar-word-htmls/tattooed.html">tattooed</a><br>
+		<a href="dollar-word-htmls/toilets.html">toilets</a><br>
+		<a href="dollar-word-htmls/undress.html">undress</a><br>
+		<a href="dollar-word-htmls/whistles.html">whistles</a><br>
+	</div>
 	</div>
 </body>
-<script type="text/javascript">
-	
-d3.csv('https://raw.githubusercontent.com/linj708/core_studio/master/practice/3%3A3%3A20/All%20-%20Sheet1.csv')
-	.then(
-		function(data){
-			console.log(data)
-			viewData(data,'main')
-		}
-		)
-	.catch(function(error){
-		// catch error
-	})
-// declare a function
-function viewData (data, location_id) {
-	// select the element that I will write the data in
-	el = document.querySelector('#'+location_id)
-	// write everything as text to this location
-
-	// select just one item and it's name
-	// el.innerHTML = data[0]['word']
-
-	// iterate over each item and do something with its attributes
-
-	data.forEach(function(item){
-			div = document.createElement('div')
-			div.setAttribute('class','card')
-			div.classList.add(item['part of speech'])
-			h2 = document.createElement('h2')
-			h2.innerHTML=item['word']
-			div.appendChild(h2)
-			el.appendChild(div)
-
-	})
-}
-
-
-</script>
 </html>
