@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
-	<script src="https://d3js.org/d3.v5.min.js"></script>
+	<title>$ Dollar Holler</title>
 </head>
+<meta charset="utf-8"/>
 <style type="text/css">
 	body, html {
 		font-family: "Britannic Bold", sans-serif;
-		background-color: #309975
+		background-color: #309975;
+		color: #454D66;
 
 		}
 
@@ -22,12 +23,12 @@
 		font-size: 1.5em;
 		margin-bottom: 10px;
 		margin-top: 0;
+		position: fixed;
 	}
 
 	a {
 		text-decoration: none;
 		color: #454D66;
-		padding-left: 1.4em;
 		line-height: 1.4;
 	}
 
@@ -36,14 +37,10 @@
 		grid-column: 2;
 		grid-row:1;
 		font-size: 5em;
-		padding: none;
-		overflow-y: auto;
 	}
 
 	#left {
 		margin: 1em;
-		grid-column: 1;
-		grid-row: 1;
 		text-align: center;
 		position: fixed;
 	}
@@ -60,22 +57,52 @@
 		width: 9em;
 		height: 9em;
 		margin: 0.7em;
+		display: inline-grid;
 	}
 
 	.circle form {
 		color: #454D66;
 		font-size: 1.5em;
-		margin-top: 1.5em;
-		
+		margin-top: 1em;
 
 	}
 
 	#screen {
-		height: 11%;
+		height: 20em;
+		width: 33em;
 		background-color: #309975;
 		border: solid 5pt #EFEEB4;
+		margin-top: 1em;
 	}
 
+	#screen p {
+		font-size: 2em;
+		text-align: left;
+		line-height: 1.2;
+		margin: 0.5em;
+	}
+
+	#links {
+		padding-top: 1.5em;
+		padding-left: 1.4em;
+	}
+
+	#links br {
+		line-height: 1.4;
+	}
+
+	#button {
+		background-color: #EFEEB4;
+		font-family: "Britannic Bold", sans-serif;
+  		border: none;
+	  	color: #454D66;
+	  	text-align: center;
+	  	text-decoration: none;
+	  	display: inline-grid;
+	  	font-size: 2em;
+	  	margin: 1em;
+	  	cursor: pointer;
+	}
 
 
 
@@ -83,50 +110,72 @@
 <body>
 	<div id="grid-container">
 	<div id="left">
-		<div id="screen"></div>
+		<div id="screen">
+			<p id="first" onclick="myWelcome()">Welcome! Click me to continue.</p>
+		</div>
 		<div id="selectors">
 		<div class="circle">
 			<form>
   			starting<br>letter:<br>
-  			<select id="mySelect">
-    		<option value="annually">a</option>
-    		<option value="orange">b</option>
-    		<option value="pineapple">c</option>
-    		<option value="banana">d</option>
+  			<select id="letters">
+    		<option value="annually<br>attitude">a</option>
+    		<option value="backtracking<br>boundary<br>boycott">b</option>
+    		<option value="commandeered<br>culture">c</option>
+    		<option value="debaucheries<br>drizzle">d</option>
+    		<option value="evolves<br>">e</option>
+    		<option value="frisson<br>">f</option>
+    		<option value="hurrayed<br>">h</option>
+    		<option value="inapplicable<br>infernos">i</option>
+    		<option value="luckiest<br>">l</option>
+    		<option value="mantises<br>mittens">m</option>
+    		<option value="non-breakable<br>novellas">n</option>
+    		<option value="outset<br>">o</option>
+    		<option value="payphone<br>primary<br>printer">p</option>
+    		<option value="styles<br>swimmer">s</option>
+    		<option value="tattooed<br>toilets">t</option>
+    		<option value="undress<br>">u</option>
+    		<option value="whistles<br>">w</option>
   			</select>
+  			<button type="button" onclick="myLetters()">ENTER</button>
 			</form>
 		</div>
 		<div class="circle">
 			<form>
   			# of<br>letters:<br>
-  			<select id="mySelect">
-    		<option value="annually">5</option>
-    		<option value="orange">6</option>
-    		<option value="pineapple">7</option>
-    		<option value="banana">8</option>
+  			<select id="numbers">
+    		<option value="outset<br>styles">6</option>
+    		<option value="boycott<br>culture<br>drizzle<br>evolves<br>frisson<br>mittens<br>primary<br>printer<br>swimmer<br>toilets<br>undress">7</option>
+    		<option value="annually<br>boundary<br>hurrayed<br>infernos<br>luckiest<br>mantises<br>novellas<br>payphone<br>tattooed<br>whistles">8</option>
+    		<option value="backtracking<br>commandeered<br>debaucheries<br>inapplicable<br>non-breakable">12</option>
   			</select>
+  			<button type="button" onclick="myNumbers()">ENTER</button>
 			</form>
+
 		</div>
 		<div class="circle">
 			<form>
   			part of<br>speech:<br>
-  			<select id="mySelect">
-    		<option value="annually">5</option>
-    		<option value="orange">6</option>
-    		<option value="pineapple">7</option>
-    		<option value="banana">8</option>
+  			<select id="grammar">
+    		<option value="novellas<br>outset<br>mittens<br>printer<br>swimmer<br>toilets<br>boundary<br>infernos<br>mantises<br>payphone<br>debaucheries<br>frisson<br>styles<br>culture">n.</option>
+    		<option value="hurrayed<br>boycott<br>evolves<br>undress<br>tattooed<br>whistles<br>backtracking<br>commandeered<br>drizzle">v.</option>
+    		<option value="inapplicable<br>non-breakable<br>luckiest<br>primary">adj.</option>
+    		<option value="annually<br>">adv.</option>
   			</select>
+  			<button type="button" onclick="myGrammar()">ENTER</button>
 			</form>
 		</div>
 		</div>
-
-	</div>
+		<div id="refresh">
+			<button id="button" onClick="refreshPage()">REFRESH</button>
+		</div>
+		</div>
 	<div class="main">
 		<h1 id="title">$ Dollar Holler</h1>
+		<div id="links">
 		<a href="dollar-word-htmls/annually.html">annually</a><br>
 		<a href="dollar-word-htmls/attitude.html">attitude</a><br>
 		<a href="dollar-word-htmls/backtracking.html">backtracking</a><br>
-		<a href="dollar-word-htmls/bacon.html">bacon</a><br>
+		<a href="dollar-word-htmls/bacon.html">boycott</a><br>
 		<a href="dollar-word-htmls/boundary.html">boundary</a><br>
 		<a href="dollar-word-htmls/commandeered.html">commandeered</a><br>
 		<a href="dollar-word-htmls/culture">culture</a><br>
@@ -152,7 +201,40 @@
 		<a href="dollar-word-htmls/toilets.html">toilets</a><br>
 		<a href="dollar-word-htmls/undress.html">undress</a><br>
 		<a href="dollar-word-htmls/whistles.html">whistles</a><br>
+		</div>
 	</div>
 	</div>
 </body>
+
+<script type="text/javascript">
+
+	function myWelcome() {
+  	document.getElementById("first").innerHTML = "This is a compilation of Joyce's favorite dollar words. A \"dollar word\" is one whose total value is exactly 100 when each of its letters is assigned a value according to its position in the alphabet: a=1, b=2, ..., z=26.";
+	}
+
+	function myLetters() {
+  	var x = document.getElementById("letters").value;
+  	document.getElementById("links").innerHTML = x;
+  	console.log(x)
+
+  }
+
+  	function myNumbers() {
+  	var y = document.getElementById("numbers").value;
+  	document.getElementById("links").innerHTML = y;
+  	console.log(y)
+
+  }
+
+  	function myGrammar() {
+  	var z = document.getElementById("grammar").value;
+  	document.getElementById("links").innerHTML = z;
+  	console.log(z)
+  }
+
+  	function refreshPage(){
+    window.location.reload();
+}
+
+</script>
 </html>

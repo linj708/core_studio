@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Select onChange</title>
+  </head>
+
+  <body>
+    <select name="ap">
+      <option>Please choose an option</option>
+    </select>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script>
+      const $select = $('select[name="ap"]');
+      const opts = [
+        {'value':'http://www.google.com', 'text':'Google'},
+        {'value':'http://www.google.co.uk', 'text':'Google UK'},
+        {'value':'http://www.google.fr', 'text':'Google FR'}
+      ];
+
+      opts.forEach(function(obj){
+        $("<option />", {
+          value: obj.value,
+          text: obj.text
+        }).appendTo($select)
+      });
+
+      $select.on("change", function(){
+        window.location = this.value;
+      });
+    </script>
+  </body>
+</html>
