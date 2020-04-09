@@ -2,22 +2,109 @@
 <html>
 <head>
 	<title>Project 2</title>
-	<link rel="stylesheet" type="text/css" href="../styles/project2.css">
+	<link href="https://fonts.googleapis.com/css?family=Antic+Didone&display=swap" rel="stylesheet">
 </head>
+<style type="text/css">
+	body, html {
+		font-family: 'Gotham', sans-serif;
+		top:0;
+		left:0;
+		width:100%:;
+		margin:0%;
+	}
+	h1 {
+		font-size:1em;
+	}
+	.sticky {
+		position:fixed;
+		margin:5%;
+		color:white;
+		border-bottom:1em solid yellow;
+	}
+	.exercise {
+		top:0;
+		left:0%;
+	}
+	.content {
+		padding:5%;
+		width:90%;
+		min-height:100vh;
+		max-height:fit-content;
+		text-align:right;
+	}
+	.content h1 {
+		font-size:3em;
+		font-weight:800;
+		text-align:left;
+		opacity:0.5;
+	}
+	.content p {
+		font-size:4em;
+		color:white;
+	}
+	.content img {
+		width:75%;
+		transition:0.25s ease-in-out;
+	}
+	#one, #three {
+		background-color:lightblue;
+		color:#f2f2f2;
+	}
+	#two, #four {
+		background-color:lavender;
+	}
+	a {
+		background-color:transparent;
+		padding:2%;
+		border:0.5em solid yellow;
+		text-decoration: none;
+		color:white;
+		transition:0.25s ease-in-out;
+		display: block;
+    	width: fit-content
+	}
+	a:hover{
+		background-color:yellow;
+		color:lightblue;
+	}
+
+}
+
+</style>
 <body>
-	<div class='container'>
-		<h1>Project 2</h1>
-		<div class="ideation">
-			<h2>Data + Ideation</h2>
-			<div class="links">
+	<!-- Exercise 1 materials -->
+	<div class='exercise'>
+		<h1 class='sticky'>Project 2: Catalogue Application</h1>
+		<!-- Research question -->
+		<div class='content' id='one'>
+			<h1>Dollar Words</h1>
+			<p>I chose to focus my data set on "dollar words", which are words add up to 100 when giving the letters numerical values based on their order in the alphabet</p>
 			<a href="https://docs.google.com/spreadsheets/d/1yeHogRkK5oKq0eXfSDj_3HYiITou3QPx8AGZANVo2cY/edit?usp=sharing">Link to Data Sheet</a>
-			<a href="https://xd.adobe.com/view/e1a286f5-932b-454e-5589-b96079573b56-9793/">Adobe XD Sketch 2</a>
-			<a href="prototype2.html">Prototype</a>
-			</div>
+		</div>
+		<!-- User survey -->
+		<div class='content' id='two'>
+			<h1>Ideation</h1>
 			<div class="images">
 			<img src="../images/project2ideation.png">
 			<img src="../images/project2ideation2.png">
 			</div>
+		</div>
+		<!-- Results of user survey -->
+		<div class='content' id='three'>
+			<h1>Adobe XD Prototype + Wireframe</h1>
+			<img src="../images/dollarhollersketch.png">
+			<a href="https://xd.adobe.com/view/e1a286f5-932b-454e-5589-b96079573b56-9793/">Link to Adobe XD Sketch</a>
+		</div>
+		<!-- Ideation basd on survey-->
+		<div class='content' id='four'>
+			
+			<h1>User Testing</h1>
+			<!-- image link -->
+			<video width="1000" height="auto" controls>
+  			<source src="../images/dollarhollerusertesting.mov" type="video/mp4">
+			Your browser does not support the video tag.
+			</video>
+			<!-- image links -->
 		</div>
 	</div>
 
