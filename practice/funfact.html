@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>fun!</title>
+</head>
+<style type="text/css">
+	
+	body {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.circle {
+		border-radius: 50%;
+		width: 15em;
+		height: 15em;
+		background-color: orange;
+		margin-top: 17em;
+	}
+	
+
+	.circle p {
+		text-align: center;
+		justify-content: center;
+		padding: 6em 0;
+		font-family: sans-serif;
+		color: white;
+	}
+
+	#card {
+		border-radius: 5%;
+		background-color: lightblue;
+		border: solid 5px orange;
+		width: 15em;
+		height: 25em;
+		position: absolute;
+	}
+
+	#newscreen {
+		align-items: center;
+		justify-content: center;
+		display: block;
+	}
+
+	#card p {
+
+	}
+
+</style>
+<body>
+	<div class="circle" onclick="appearCard()">
+		<p>click me :)</p>
+	</div>
+
+	<div id="newscreen">
+		<div id="card">
+			<p>you is smart, you is beautiful</p>
+		</div>
+	</div>
+</body>
+<script src="../assets/lib/anime.min.js">
+	
+/*	function appearCard(){
+		var x = document.getElementById("newscreen");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+	}
+*/
+
+
+</script>
+
+</html>
