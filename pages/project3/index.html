@@ -84,7 +84,103 @@
 		height: 213px;
 	}
 
-	.button {
+	#fish-animation {
+		position: relative;
+		z-index: 1;
+		display: none;
+	}
+
+	#fish-animation img {
+		margin-top: -150px;
+		width: 300px;
+		cursor: pointer;
+		animation: fishscale 1.25s infinite ease-in-out;
+	}
+
+	@keyframes fishscale {
+		/*0% {
+			transform: scale(0);
+		}
+		15% {
+			transform: scale(1);
+		}
+		30% {
+			transform: scale(0.8);
+		}
+		45% {
+			transform: scale(1);
+		}
+
+		60% {
+			transform: scale(0.8);
+		}
+		75% {
+			transform: scale(1);
+		}
+		90% {
+			transform: scale(0.8);
+		}
+		100% {
+			transform: scale(1);
+		}*/
+
+		0% {
+        opacity: 0;
+        
+    	}
+
+    	25% {
+        opacity: 1;
+      
+    	}
+
+    	50% {
+        opacity: 0;
+   
+    	}
+
+    	51% {
+        opacity: 0;
+       
+    	}
+
+    	75% {
+        opacity: 1;
+       
+    	}
+
+    	100% {
+        opacity: 0;
+     
+    	}
+	}
+
+	#heart-animation {
+		position: relative;
+		z-index: 1;
+		display: none;
+	}
+
+	#heart-animation img {
+		margin-top: 40px;
+		width: 225px;
+		cursor: pointer;
+		animation: heartthump 0.5s ease-in-out;
+	}
+
+	@keyframes heartthump {
+		0% {
+			transform: scale(0);
+		}
+		96% {
+			transform: scale(1.5);
+		}
+		100% {
+			transform: scale(1);
+		}
+	}
+
+	.btn {
 		border-radius: 50%;
 		height: 75px;
 		width: 75px;
@@ -100,6 +196,11 @@
 		justify-content: center;
 		align-items: center;
 		text-align: center;
+		cursor: pointer;
+	}
+
+	.feed:active {
+
 	}
 
 	.gallery {
@@ -129,20 +230,25 @@
 <body>
 	<div class="container">
 		<h1>RESCUED FRIENDS</h1>
+
 		<div class="card">
 			<h2>NORTHERN ROCKHOPPER PENGUIN</h2>
 			<p>Eudyptes moseleyi</p>
 			<div class="frame">
+				<div id="fish-animation" onClick="fishbye(); heart()">
+					<img src="../../assets/fish-animation.png">
+				</div>
+				<div id="heart-animation" onClick="heartbye()">
+					<img src="../../assets/heart-animation.png">
+				</div>
 				<div id="image-holder">
-					<lottie-player src=""  background="transparent"  speed="1" loop false></lottie-player>
 					<img src="../../images/happypenguin.png">
 				</div>
 			</div>
 			<h1>PABLO</h1>
 		</div>
-	<div class="navbar"></div>
-		<div class="feed button" onclick="feed">FEED</div>
-		<div class="gallery button">
+		<div class="feed btn" onClick="feed()">FEED</div>
+		<div class="gallery btn">
 			<img src="../../assets/galleryicon.png">
 		</div>
 		<div class="left-arrow">
@@ -157,16 +263,23 @@
 
 <script type="text/javascript">
 
-	element=document.querySelector('#scene')
-	player = document.querySelector("lottie-player");
-	controls = document.querySelectorAll('.progress div');
-	progress = 1
-	prefix = 'https://raw.githubusercontent.com/linj708/core_studio/master/practice/mobile_intro/data/'
-	document.querySelector('#l1').style.backgroundColor="#666666";
-	getAnim(prefix+'1.json',true);
-	function feed() {
+	function feed(){
+		document.getElementById('fish-animation').style.display = 'block';
+	}
 
-}
+	function fishbye(){
+		document.getElementById('fish-animation').style.display = 'none';
+	}
+
+	function heart(){
+		document.getElementById('heart-animation').style.display = 'block';
+	}
+
+	function heartbye(){
+		document.getElementById('heart-animation').style.display = 'none';
+	}
+
+
 
 	
 </script>
