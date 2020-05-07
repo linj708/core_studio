@@ -3,6 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=375, initial-scale=1.0">
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.5.9/lottie.js"></script>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@0.4.0/dist/lottie-player.js"></script>
 	<title></title>
 </head>
 
@@ -40,6 +43,24 @@
 		grid-row: 1;
 	}
 
+	.card .flipper.flip {
+		transform: rotateY(180deg);
+	}
+
+	/* flip speed */
+	.flipper {
+		transition: 0.8s;
+		transform-style: preserve-3d;
+		position: relative;
+	}
+
+	/* hide back of pane during swap */
+	.front, #back {
+		backface-visibility: hidden;
+		position: absolute;
+	}
+
+
 	.card {
 		width: auto;
 		height: 544px;
@@ -48,7 +69,6 @@
 		border-radius: 10px;
 		background-color: var(--mediumblue);
 		color: var(--lightblue);
-		box-shadow: 0px 3px 6px #000000;
 		display: block;
 	}
 
@@ -56,6 +76,22 @@
 		margin-top: 17px;
 		font-size: 40px;
 	}
+
+	.front {
+		z-index: 2;
+  		transform: rotateY(0deg);
+	}
+
+	#back {
+		position: absolute;
+		width: 100%;
+		height: 544px;
+		border-radius: 10px;
+		background-color: var(--darkblue);
+		box-shadow: 0px 3px 6px #000000;
+		transform: rotateY(180deg);
+	}
+
 
 	.frame {
 		border-radius: 50%;
@@ -84,7 +120,7 @@
 		height: 213px;
 	}
 
-	#fish-animation {
+	/*#fish-animation {
 		position: relative;
 		z-index: 1;
 		display: none;
@@ -98,7 +134,7 @@
 	}
 
 	@keyframes fishscale {
-		/*0% {
+		0% {
 			transform: scale(0);
 		}
 		15% {
@@ -122,7 +158,7 @@
 		}
 		100% {
 			transform: scale(1);
-		}*/
+		}
 
 		0% {
         opacity: 0;
@@ -178,6 +214,12 @@
 		100% {
 			transform: scale(1);
 		}
+	}*/
+
+	#scene {
+		width: 100%;
+		margin: 0 auto;
+		z-index: 999;
 	}
 
 	.btn {
@@ -197,10 +239,6 @@
 		align-items: center;
 		text-align: center;
 		cursor: pointer;
-	}
-
-	.feed:active {
-
 	}
 
 	.gallery {
@@ -232,20 +270,33 @@
 		<h1>RESCUED FRIENDS</h1>
 
 		<div class="card">
-			<h2>NORTHERN ROCKHOPPER PENGUIN</h2>
-			<p>Eudyptes moseleyi</p>
-			<div class="frame">
-				<div id="fish-animation" onClick="fishbye(); heart()">
-					<img src="../../assets/fish-animation.png">
+			<div class="flipper">
+				<div class="front">
+				<h2>NORTHERN ROCKHOPPER PENGUIN</h2>
+				<p>Eudyptes moseleyi</p>
+					<div class="frame">
+						<div id="scene">
+						</div>
+					<!--
+					<div id="fish-animation" onClick="fishbye(); heart()">
+						<img src="../../assets/fish-animation.png">
+					</div>
+					<div id="heart-animation" onClick="heartbye()">
+						<img src="../../assets/heart-animation.png">
+					</div>
+					-->
+					<div id="image-holder">
+						<img src="../../images/happypenguin.png">
+					</div>
 				</div>
-				<div id="heart-animation" onClick="heartbye()">
-					<img src="../../assets/heart-animation.png">
+				<h1>PABLO</h1>
 				</div>
-				<div id="image-holder">
-					<img src="../../images/happypenguin.png">
+				<div id="back">
+					<div class="animal-info">
+						hehehe
+					</div>
 				</div>
 			</div>
-			<h1>PABLO</h1>
 		</div>
 		<div class="feed btn" onClick="feed()">FEED</div>
 		<div class="gallery btn">
@@ -261,9 +312,17 @@
 
 </body>
 
-<script type="text/javascript">
+<script>
 
-	function feed(){
+	var animation = bodymovin.loadAnimation({
+      container: document.getElementById('scene'),
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: '../../assets/fish-animation.json'
+    })
+
+	/*function feed(){
 		document.getElementById('fish-animation').style.display = 'block';
 	}
 
@@ -277,7 +336,12 @@
 
 	function heartbye(){
 		document.getElementById('heart-animation').style.display = 'none';
-	}
+	}*/
+
+
+	$('.card .flipper').click(function(){
+    $(this).toggleClass("flip");
+});
 
 
 
