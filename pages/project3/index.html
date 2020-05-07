@@ -92,6 +92,18 @@
 		transform: rotateY(180deg);
 	}
 
+	#back p {
+		color: white;
+		font-size: 13.5px;
+		text-align: left;
+		margin: 15px;
+	}
+
+	#back h3 {
+		text-align: left;
+		margin: 15px
+	}
+
 
 	.frame {
 		border-radius: 50%;
@@ -235,7 +247,7 @@
 		box-shadow: 0px 3px 6px #000000;
 	}
 
-	.feed {
+	#feed {
 		grid-column: 3;
 		grid-row: 3;
 		font-size: 23px;
@@ -281,17 +293,9 @@
 				<p>Eudyptes moseleyi</p>
 					<div class="frame">
 						<div id="scene">
-							<lottie-player autoplay number="1" mode="normal" style="width: 320px">
+							<lottie-player autoplay mode="normal" style="width: 320px">
 							</lottie-player>
 						</div>
-					<!--
-					<div id="fish-animation" onClick="fishbye(); heart()">
-						<img src="../../assets/fish-animation.png">
-					</div>
-					<div id="heart-animation" onClick="heartbye()">
-						<img src="../../assets/heart-animation.png">
-					</div>
-					-->
 					<div id="image-holder">
 						<img src="../../images/happypenguin.png">
 					</div>
@@ -300,12 +304,17 @@
 				</div>
 				<div id="back">
 					<div class="animal-info">
-						hehehe
+						<h3>Food and Feeding</h3>
+						<p>The northern rockhopper penguin feeds on krill and other sea life such as crustaceans, squid, octopus and fish.</p>
+						<h3>Population and Threats</h3>
+						<p>The current population is estimated to be between 100,000–499,999 breeding pairs at Gough Island, 18,000 to 27,000 pairs at Inaccessible Island, and 3,200 to 4,500 at Tristan da Cunha. In the Indian Ocean, the population was 25,500 pairs on Amsterdam Island, and 9,000 pairs on St Paul Island in 1993. Declines at the Atlantic Ocean sites show a decline of 2.7% per year; the drop in the population at Gough Island has been described as equivalent to the loss of 100 birds every day since the 1950s.
+						<br><br>
+						The northern rockhopper penguin is classified as endangered because of the decline in numbers over the last three generations (or 30 years).</p>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="feed btn" onClick="feed()">FEED</div>
+		<div id="feed" class="btn" onClick="feed()">FEED</div>
 		<div class="gallery btn">
 			<img src="../../assets/galleryicon.png">
 		</div>
@@ -323,6 +332,8 @@
 
 	const player = document.querySelector("lottie-player");
 	player.load("https://raw.githubusercontent.com/linj708/core_studio/master/assets/fish-animation.json");
+
+
  
 
 	function feed(){
