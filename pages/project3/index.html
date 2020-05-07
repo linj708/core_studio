@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=375, initial-scale=1.0">
 <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.5.9/lottie.js"></script>
 <script src="https://unpkg.com/@lottiefiles/lottie-player@0.4.0/dist/lottie-player.js"></script>
+<script src="/node_modules/@lottiefiles/lottie-player/dist/lottie-player.js"></script>
 	<title></title>
 </head>
 
@@ -217,9 +217,14 @@
 	}*/
 
 	#scene {
+		display: none;
 		width: 100%;
 		margin: 0 auto;
-		z-index: 999;
+	}
+
+	lottie-player {
+		z-index: 99;
+		margin-top:-160px;
 	}
 
 	.btn {
@@ -276,6 +281,8 @@
 				<p>Eudyptes moseleyi</p>
 					<div class="frame">
 						<div id="scene">
+							<lottie-player autoplay number="1" mode="normal" style="width: 320px">
+							</lottie-player>
 						</div>
 					<!--
 					<div id="fish-animation" onClick="fishbye(); heart()">
@@ -314,17 +321,15 @@
 
 <script>
 
-	var animation = bodymovin.loadAnimation({
-      container: document.getElementById('scene'),
-      renderer: 'svg',
-      loop: true,
-      autoplay: true,
-      path: '../../assets/fish-animation.json'
-    })
+	const player = document.querySelector("lottie-player");
+	player.load("https://raw.githubusercontent.com/linj708/core_studio/master/assets/fish-animation.json");
+ 
 
-	/*function feed(){
-		document.getElementById('fish-animation').style.display = 'block';
+	function feed(){
+		document.getElementById('scene').style.display = 'flex';
 	}
+
+	/*
 
 	function fishbye(){
 		document.getElementById('fish-animation').style.display = 'none';
